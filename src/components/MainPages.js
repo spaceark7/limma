@@ -1,5 +1,4 @@
 'use client'
-
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Knowledge from '@/components/Knowledge'
@@ -8,22 +7,23 @@ import Product from '@/components/Product'
 import Hero from '@/components/UIProvider/Hero'
 import React from 'react'
 
-export default function MainPages() {
+const MainPages = () => {
   const heroRef = React.useRef(null)
   const knowledgeRef = React.useRef(null)
   const productRef = React.useRef(null)
   const contactRef = React.useRef(null)
 
   return (
-    <main className='relative h-[200dvh]'>
+    <main className='relative '>
       <NavBar
         heroRef={heroRef}
         storyRef={knowledgeRef}
         productRef={productRef}
         contactRef={contactRef}
       />
+
       <section ref={heroRef} className='bg-[#fdf4e3]'>
-        <Hero storyRef={knowledgeRef} />
+        <Hero />
       </section>
 
       <section ref={knowledgeRef}>
@@ -44,3 +44,5 @@ export default function MainPages() {
     </main>
   )
 }
+
+export default MainPages

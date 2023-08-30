@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Box,
   Center,
@@ -37,7 +35,7 @@ export default function ProductCard({ item }) {
             pos: 'absolute',
             top: 5,
             left: 0,
-            backgroundImage: `url(${item.image.src})`,
+            backgroundImage: `url(${item.image})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -52,12 +50,12 @@ export default function ProductCard({ item }) {
             height={230}
             width={282}
             objectFit={'contain'}
-            src={item.image.src}
+            src={item.image}
             alt={item.title}
           />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Text color={'gray.500'}>{item.title}</Text>
+          <Text color={'gray.500'}>{item.product_name}</Text>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
             {item.size}
           </Heading>
